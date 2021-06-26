@@ -72,6 +72,8 @@ def open_account(session):
         base[session].append([ran, '0'])
         base[session][1] = int(base[session][1]) + 1
         print("Successfully opened a new account!")
+    else:
+        return open_account(session)
     save_data()
 
 def main():
